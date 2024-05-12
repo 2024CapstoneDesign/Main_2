@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디저트</title>
+    <link rel="stylesheet" href="des.css"/>
+    <style>
+        .pop_wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pop_inner {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .btn_close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="cart">
+            <!-- CSS를 사용하여 스타일 적용 -->
+            <div class="he">
+                <button class="head" onclick="location.href='index.html'">
+                    <img src="Logo.png" width="75" height= "100">
+                        <div class="ma">메인으로</div>
+                </button>
+            </div>
+            <div class="order-header"></div>
+            <div class="food_category">
+                <button type="button" class="category" onclick="location.href='cafe_menu.html'">커피</button>  
+                <button type="button" class="category" onclick="location.href='drink_menu.html'">음료</button>
+                <button type="button" class="category" onclick="location.href='des.html'">디저트</button>
+            </div>
+            
+            <div class="food_example">
+                <div class="food_row">
+                    <a href="#pop_info_1" class="food_picture btn_open">
+                        <img src="sal.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">살몬베이글</div>
+                            <div class="price">7500원</div>
+                        </div>
+                    </a>
+                    <a href="#pop_info_1" class="food_picture btn_open">
+                        <img src="tart.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">타르트</div>
+                            <div class="price">7000원</div>
+                        </div>
+                    </a>
+                    <a href="#pop_info_1" class="food_picture btn_open">
+                        <img src="ti.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">티라미수</div>
+                            <div class="price">6000원</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="food_row">
+                    <a href="#pop_info_1" class="food_picture btn_open">
+                        <img src="croi.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">크로아상</div>
+                            <div class="price">3500원</div>
+                        </div>
+                    </a>
+                    <a href="#pop_info_1" class="food_picture btn_open">
+                        <img src="choc.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">초코쿠키</div>
+                            <div class="price">2500원</div>
+                        </div>
+                    </a>
+                    <a href="#pop_info_1" class="food_picture btn_open">
+                        <img src="lem.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">레몬마카롱</div>
+                            <div class="price">2500원</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 팝업1 -->
+    <div id="pop_info_1" class="pop_wrap">
+        <div class="pop_inner">
+            <p class="dsc">장바구니에 담겼습니다.</p>
+            <button type="button" class="btn_close">닫기</button>
+        </div>
+    </div>
+    <script>
+        var target = document.querySelectorAll('.btn_open');
+        var btnPopClose = document.querySelectorAll('.btn_close');
+        var targetID;
+
+        // 팝업 열기
+        for (var i = 0; i < target.length; i++) {
+            target[i].addEventListener('click', function () {
+                targetID = this.getAttribute('href');
+                document.querySelector(targetID).style.display = 'flex';
+            });
+        }
+
+        // 팝업 닫기
+        for (var j = 0; j < btnPopClose.length; j++) {
+            btnPopClose[j].addEventListener('click', function () {
+                this.closest('.pop_wrap').style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
