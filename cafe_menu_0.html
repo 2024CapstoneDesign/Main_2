@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카페</title>
     <link rel="stylesheet" href="cafe_menu.css"/>
-    <script src="shoppingCart.js"></script>
 </head>
 <body>
     <main>
@@ -26,56 +25,49 @@
             
             <div class="food_example">
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('아메리카노', 2500); window.location.href='cafe_opt.html'">
+                    <button type="button" class="food_picture" onclick="location.href='cafe_opt.html'">
                         <img src="ame.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">아메리카노</div>
                             <div class="price">2,500원</div>
                         </div>
-                    </a>
+                    </button>
                         
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('라떼', 3200); window.location.href='cafe_opt.html'">
+                    <button type="button" class="food_picture" onclick="location.href='cafe_opt.html'">
                         <img src="latte.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">라떼</div>
                             <div class="price">3,200원</div>
                         </div>
-                    </a>
+                    </button>
         
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('카푸치노', 380); window.location.href='cafe_opt.html'">
+                    <button type="button" class="food_picture" onclick="location.href='cafe_opt.html'">
                         <img src="caf.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">카푸치노</div>
                             <div class="price">3,800원</div>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('에스프레소', 2000); window.location.href='cafe_opt.html'">
+                    <button type="button" class="food_picture" onclick="location.href='cafe_opt.html'">
                         <img src="esp.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">에스프레소</div>
                             <div class="price">2,000원</div>
                         </div>
-                    </a>
+                    </button>
         
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('아포가토', 4000); window.location.href='cafe_opt.html'">
+                    <button type="button" class="food_picture" onclick="location.href='cafe_opt.html'">
                         <img src="affo.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">아포가토</div>
                             <div class="price">4,000원</div>
                         </div>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
-        
-        <div class="cart">
-            <h2>장바구니</h2>
-            <div id="cart-items"></div>
-            <div id="total-price">0</div>
-            <button onclick="checkout()">결제하기</button>
-        </div>
-    </main>
+    </main>    
 </body>
 </html>

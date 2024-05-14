@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커피_옵션</title>
     <link rel="stylesheet" href="cafe_opt.css"/>
-    <script src="shoppingCart.js"></script>
     <style>
         .pop_wrap {
             position: fixed;
@@ -55,21 +54,21 @@
             
             <div class="food_example">
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('필요 없음', 0); window.location.href='cafe_menu.html'">
+                    <a href="#pop_info_1" class="food_picture btn_open">
                         <img src="no.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">필요 없음</div>
                             <div class="price">+0원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('아이스로 변경', 500); window.location.href='cafe_menu.html'">
+                    <a href="#pop_info_1" class="food_picture btn_open">
                         <img src="ice.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">아이스로 변경</div>
                             <div class="price">+500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('사이즈 업', 500); window.location.href='cafe_menu.html'">
+                    <a href="#pop_info_1" class="food_picture btn_open">
                         <img src="size.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">사이즈 업</div>
@@ -78,14 +77,14 @@
                     </a>
                 </div>
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('샷 추가', 500); window.location.href='cafe_menu.html'">
+                    <a href="#pop_info_1" class="food_picture btn_open">
                         <img src="shot.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">샷 추가</div>
                             <div class="price">+500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('우유 추가', 500); window.location.href='cafe_menu.html'">
+                    <a href="#pop_info_1" class="food_picture btn_open">
                         <img src="milk.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">우유 추가</div>
@@ -95,23 +94,15 @@
                 </div>
             </div>
         </div>
-
-        <!-- 팝업1 -->
-        <div id="pop_info_1" class="pop_wrap">
-            <div class="pop_inner">
-                <p class="dsc">장바구니에 담겼습니다.</p>
-                <button type="button" class="btn_close">닫기</button>
-            </div>
-        </div>
-
-        <div class="cart">
-            <h2>장바구니</h2>
-            <div id="cart-items"></div>
-            <div id="total-price">0</div>
-            <button onclick="checkout()">결제하기</button>
-        </div>
     </main>
 
+    <!-- 팝업1 -->
+    <div id="pop_info_1" class="pop_wrap">
+        <div class="pop_inner">
+            <p class="dsc">장바구니에 담겼습니다.</p>
+            <button type="button" class="btn_close">닫기</button>
+        </div>
+    </div>
     <script>
         var target = document.querySelectorAll('.btn_open');
         var btnPopClose = document.querySelectorAll('.btn_close');
