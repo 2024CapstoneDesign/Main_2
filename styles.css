@@ -13,7 +13,7 @@ body {
   .right-panel {
     background-color: #ffffff;
     width: 600px;
-    height: 600px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,6 @@ body {
   }
   
   .button-container {
-    margin-top: 100px;
   }
   .a{
     font-size: 40px;
