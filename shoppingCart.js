@@ -1,5 +1,3 @@
-// shoppingCart.js
-
 function addToCart(itemName, price) {
     const cartItems = document.getElementById('cart-items');
     const existingItem = cartItems.querySelector(`[data-name="${itemName}"]`);
@@ -84,4 +82,14 @@ function loadCartItems() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadCartItems);
+function clearCart() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    updateTotal();
+    localStorage.removeItem('cart');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadCartItems();
+    document.getElementById('clear-cart').addEventListener('click', clearCart);
+});
