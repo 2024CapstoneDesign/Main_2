@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제하기</title>
+    <link rel="stylesheet" href="checkout.css"/>
+    <script defer src="shoppingCart.js"></script>
+</head>
+<body>
+    <main>
+        <div class="cart">
+            <div class="head">
+                <button class="head-button" onclick="location.href='index.html'">
+                    <img src="Logo.png" width="75" height="100" alt="로고">
+                    <div class="ma">메인으로</div>
+                </button>
+            </div>
+        <div class="cart2">
+            <h2>장바구니</h2>
+            <div id="cart-items"></div>
+            <div id="total-price">0</div>
+        </div>
+            <div class="payment-buttons">
+                <button id="cash-payment" class="payment-button">
+                    <img src="cash.png" alt="현금결제">
+                    <div class="button-text">현금결제</div>
+                </button>
+                <button id="card-payment" class="payment-button">
+                    <img src="card.png" alt="카드결제">
+                    <div class="button-text">카드결제</div>
+                </button>
+                <button id="coupon-use" class="payment-button">
+                    <img src="cou.png" alt="쿠폰사용">
+                    <div class="button-text">쿠폰적용</div>
+                </button>
+            </div>
+            <button id="clear-cart">장바구니 초기화</button>
+        </div>
+    </main>
+</body>
+</html>
