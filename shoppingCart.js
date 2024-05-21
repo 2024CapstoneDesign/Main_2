@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const couponUseButton = document.getElementById('coupon-use');
 
     let isCouponUsed = false;
-    let isCardUsed = false;
 
     cashPaymentButton.addEventListener('click', () => {
         if (updateTotal() === 0) {
@@ -24,10 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('장바구니가 비어있습니다');
             return;
         }
-        if (!isCardUsed) {
-            alert('카드를 입력해주세요');
-            isCardUsed = true;
-        } else {
+        else {
             alert('결제가 완료되었습니다');
             location.href = "index.html";
             clearCart();
@@ -45,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const totalPriceElement = document.getElementById('total-price');
             const totalPrice = parseFloat(totalPriceElement.textContent);
             const discountedPrice = totalPrice * 0.8;
-            totalPriceElement.textContent = discountedPrice.toFixed(2);
+            totalPriceElement.textContent = discountedPrice.toFixed(0);
             alert('할인이 적용되었습니다');
             isCouponUsed = true;
         }
