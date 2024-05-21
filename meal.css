@@ -1,0 +1,86 @@
+#cart {
+    margin-top: 20px 0;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 800px;
+}
+
+.cart {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 800px; /* 너비를 지정하여 영역을 고정 */
+    position: relative;
+}
+
+.checkout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-self: end;
+    align-self: end;
+    margin: 10px;
+}
+
+.food_category {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.food_category .category {
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 23px;
+    margin: 0 5px; /* 버튼 사이 간격 조정 */
+}
+
+.food_row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.food_picture {
+    width: calc(33.33% - 20px);
+    text-align: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+.food_picture img {
+    width: 100%;
+    height: 200px; /* 고정된 높이 */
+    object-fit: cover;
+    border-radius: 10px;
+}
+.food_detail {
+    text-decoration: none; /* 밑줄 제거 */
+    display: block; /* 인라인 요소를 블록 요소로 변경 */
+}
+.head{
+    border: none;
+    background-color:transparent;
+}
+
+.checkout-button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    position: relative;
+    
+}

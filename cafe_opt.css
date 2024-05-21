@@ -1,11 +1,22 @@
+#cart {
+    margin-top: 20px 0;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 800px;
+}
+
 .cart {
-    border-radius: 20px; /* 모서리의 둥근 정도 조절 */
-    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 800px; 
-    height: 700px; 
-    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 800px; /* 너비를 지정하여 영역을 고정 */
+    position: relative;
 }
 
 .food_category {
@@ -50,4 +61,15 @@
 .head{
     border: none;
     background-color:transparent;
+}
+.checkout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-self: end;
+    align-self: end;
+    margin: 10px;
 }

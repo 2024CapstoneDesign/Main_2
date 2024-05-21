@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페</title>
+    <link rel="stylesheet" href="meal.css"/>
+    <script src="shoppingCart.js"></script>
+</head>
+<body>
+    <main>
+        <div class="cart">
+            <!-- CSS를 사용하여 스타일 적용 -->
+            <div class="he">
+                <button class="head" onclick="location.href='index.html'">
+                    <img src="Logo.png" width="75" height= "100">
+                        <div class="ma">메인으로</div>
+                </button>
+            </div>
+            <div class="order-header"></div>
+            <div class="food_category">
+                <button type="button" class="category" onclick="location.href='kimbap.html'">김밥</button>  
+                <button type="button" class="category" onclick="location.href='snack_menu.html'">분식</button>
+                <button type="button" class="category" onclick="location.href='meal.html'">식사</button>
+            </div>
+            
+            <div class="food_example">
+                <div class="food_row">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('된장찌개', 5500);">
+                        <img src="jjigae.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">된장찌개</div>
+                            <div class="price">5,500원</div>
+                        </div>
+                    </a>
+                        
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('돈까스', 9000);">
+                        <img src="kachi.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">돈까스</div>
+                            <div class="price">9,000원</div>
+                        </div>
+                    </a>
+        
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('김치볶음밥', 6000);">
+                        <img src="kimchirice.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">김치볶음밥</div>
+                            <div class="price">6,000원</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="food_row">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('순두부찌개', 6000);">
+                        <img src="tofusoup.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">순두부찌개</div>
+                            <div class="price">6,000원</div>
+                        </div>
+                    </a>
+        
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('제육덮밥', 6500);">
+                        <img src="porkrice.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">제육덮밥</div>
+                            <div class="price">6,500원</div>
+                        </div>
+                    </a>
+
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('오므라이스', 7000);">
+                        <img src="omurice.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">오므라이스</div>
+                            <div class="price">7,000원</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart">
+            <h2>장바구니</h2>
+            <div id="cart-items"></div>
+            <div id="total-price">0</div>
+            <button class= "checkout-button" onclick="checkout()">결제하기</button>
+        </div>
+    </main>
+</body>
+</html>

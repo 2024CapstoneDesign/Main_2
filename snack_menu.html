@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분식</title>
+    <link rel="stylesheet" href="meal.css"/>
+    <script src="shoppingCart.js"></script>
+</head>
+<body>
+    <main>
+        <div class="cart">
+            <!-- CSS를 사용하여 스타일 적용 -->
+            <div class="he">
+                <button class="head" onclick="location.href='index.html'">
+                    <img src="Logo.png" width="75" height= "100">
+                        <div class="ma">메인으로</div>
+                </button>
+            </div>
+            <div class="order-header"></div>
+            <div class="food_category">
+                <button type="button" class="category" onclick="location.href='kimbap.html'">김밥</button>  
+                <button type="button" class="category" onclick="location.href='snack_menu.html'">분식</button>
+                <button type="button" class="category" onclick="location.href='meal.html'">식사</button>
+            </div>
+            
+            <div class="food_example">
+                <div class="food_row">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('떡볶이', 4500);">
+                        <img src="tteokbokki.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">떡볶이</div>
+                            <div class="price">4,500원</div>
+                        </div>
+                    </a>
+                        
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('잔치국수', 5000);">
+                        <img src="soupnoodle.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">잔치국수</div>
+                            <div class="price">5,000원</div>
+                        </div>
+                    </a>
+        
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('쫄면', 5500);">
+                        <img src="noodle.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">쫄면</div>
+                            <div class="price">5,500원</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="food_row">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('라면', 3500);">
+                        <img src="ramen.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">라면</div>
+                            <div class="price">3,500원</div>
+                        </div>
+                    </a>
+        
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('칼국수', 6000);">
+                        <img src="rectangle_133.jpeg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">칼국수</div>
+                            <div class="price">6,000원</div>
+                        </div>
+                    </a>
+
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('우동', 4000);">
+                        <img src="udon.jpg" width="200" height="200">
+                        <div class="food_detail">
+                            <div class="food_name">우동</div>
+                            <div class="price">4,000원</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart">
+            <h2>장바구니</h2>
+            <div id="cart-items"></div>
+            <div id="total-price">0</div>
+            <button class= "checkout-button" onclick="checkout()">결제하기</button>
+        </div>
+    </main>
+</body>
+</html>

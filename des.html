@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>디저트</title>
-    <link rel="stylesheet" href="des.css"/>
+    <link rel="stylesheet" href="cafe_opt.css"/>
+    <script src="shoppingCart.js"></script>
     <style>
         .pop_wrap {
             position: fixed;
@@ -54,21 +55,21 @@
             
             <div class="food_example">
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('살몬베이글', 7500);">
                         <img src="sal.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">살몬베이글</div>
                             <div class="price">7500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('타르트', 7000);">
                         <img src="tart.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">타르트</div>
                             <div class="price">7000원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('티라미수', 6000);">
                         <img src="ti.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">티라미수</div>
@@ -77,21 +78,21 @@
                     </a>
                 </div>
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('크로아상', 3500);">
                         <img src="croi.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">크로아상</div>
                             <div class="price">3500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('초코쿠키', 2500);">
                         <img src="choc.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">초코쿠키</div>
                             <div class="price">2500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('레몬마카롱', 2500);">
                         <img src="lem.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">레몬마카롱</div>
@@ -100,6 +101,12 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="cart">
+            <h2>장바구니</h2>
+            <div id="cart-items"></div>
+            <div id="total-price">0</div>
+            <button class= "checkout-button" onclick="checkout()">결제하기</button>           
         </div>
     </main>
 

@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const discountedPrice = totalPrice * 0.8;
             totalPriceElement.textContent = discountedPrice.toFixed(0);
             alert('할인이 적용되었습니다');
-            isCouponUsed = true;
         }
     });
 });
