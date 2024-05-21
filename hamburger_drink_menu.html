@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음료</title>
-    <link rel="stylesheet" href="hamburger_opt.css"/>
+    <link rel="stylesheet" href="cafe_opt.css"/>
+    <script src="shoppingCart.js"></script>    
     <style>
         .pop_wrap {
             position: fixed;
@@ -55,21 +56,21 @@
             
             <div class="food_example">
                 <div class="food_row">
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('콜라', 1500); window.location.href='hamburger_opt.html'">
                         <img src="cola.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">콜라</div>
                             <div class="price">1,500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('오렌지주스', 1500); window.location.href='hamburger_opt.html'">
                         <img src="orange.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">오렌지주스</div>
                             <div class="price">1,500원</div>
                         </div>
                     </a>
-                    <a href="#pop_info_1" class="food_picture btn_open">
+                    <a href="#pop_info_1" class="food_picture btn_open" onclick="addToCart('맥주', 3000); window.location.href='hamburger_opt.html'">
                         <img src="beer.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">맥주</div>
@@ -81,13 +82,14 @@
         </div>
     </main>
 
-    <!-- 팝업1 -->
-    <div id="pop_info_1" class="pop_wrap">
-        <div class="pop_inner">
-            <p class="dsc">장바구니에 담겼습니다.</p>
-            <button type="button" class="btn_close">닫기</button>
-        </div>
-    </div>
+    <div class="cart">
+        <h2>장바구니</h2>
+        <div id="cart-items"></div>
+        <div id="total-price">0</div>
+        <button class= "checkout-button" onclick="checkout()">결제하기</button>           
+    </div>      
+
+
     <script>
         var target = document.querySelectorAll('.btn_open');
         var btnPopClose = document.querySelectorAll('.btn_close');

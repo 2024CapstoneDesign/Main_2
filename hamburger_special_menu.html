@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>특선</title>
     <link rel="stylesheet" href="hamburger_menu.css"/>
+    <script src="shoppingCart.js"></script>
 </head>
 <body>
     <main>
@@ -26,7 +27,7 @@
             
             <div class="food_example">
                 <div class="food_row">
-                    <button type="button" class="food_picture" onclick="location.href='hamburger_opt.html'">
+                    <button type="button" class="food_picture" onclick="addToCart('셰프 추천 콤비네이션', 8300); window.location.href='hamburger_menu.html'">
                         <img src="set1.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">셰프 추천 콤비네이션</div>
@@ -34,7 +35,7 @@
                         </div>
                     </button>
                         
-                    <button type="button" class="food_picture" onclick="location.href='hamburger_opt.html'">
+                    <button type="button" class="food_picture" onclick="addToCart('골드 코스트', 8600); window.location.href='hamburger_menu.html'">
                         <img src="set2.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">골드 코스트</div>
@@ -42,7 +43,7 @@
                         </div>
                     </button>
         
-                    <button type="button" class="food_picture" onclick="location.href='hamburger_opt.html'">
+                    <button type="button" class="food_picture" onclick="addToCart('치즈 브레드 런치', 6900); window.location.href='hamburger_menu.html'">
                         <img src="set3.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">치즈 브레드 런치</div>
@@ -51,7 +52,7 @@
                     </button>
                 </div>
                 <div class="food_row">
-                    <button type="button" class="food_picture" onclick="location.href='hamburger_opt.html'">
+                    <button type="button" class="food_picture" onclick="addToCart('만수르', 10500); window.location.href='hamburger_menu.html'">
                         <img src="set4.jpg" width="200" height="200">
                         <div class="food_detail">
                             <div class="food_name">만수르</div>
@@ -61,6 +62,12 @@
                 </div>                  
             </div>
         </div>
+        <div class="cart">
+            <h2>장바구니</h2>
+            <div id="cart-items"></div>
+            <div id="total-price">0</div>
+            <button class= "checkout-button" onclick="checkout()">결제하기</button>           
+        </div>         
     </main>    
 </body>
 </html>
