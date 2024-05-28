@@ -1,44 +1,56 @@
-#cart {
-    margin-top: 20px 0;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    width: 800px;
-}
-
-.cart {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .cart {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 20px auto;
-    width: 800px; /* 너비를 지정하여 영역을 고정 */
+    margin: 20px;
+    width: 100%;
+    max-width: 800px;
     position: relative;
-}
-
-.food_category {
+    background-color: #fff;
+  }
+  
+  .food_category {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.food_category .category {
+    flex-wrap: wrap;
+  }
+  
+  .food_category .category {
     text-align: center;
     padding: 10px 15px;
     font-size: 23px;
-    margin: 0 5px; /* 버튼 사이 간격 조정 */
-}
-
-.food_row {
+    margin: 5px;
+  }
+  
+  .food_example {
+    width: 100%;
+  }
+  
+  .food_row {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 20px;
-}
-
-.food_picture {
+  }
+  
+  .food_picture {
     width: calc(33.33% - 20px);
     text-align: center;
     border: none;
@@ -46,23 +58,29 @@
     cursor: pointer;
     display: block;
     position: relative;
-}
-
-.food_picture img {
+    margin: 10px 0;
+  }
+  
+  .food_picture img {
     width: 100%;
-    height: 200px; /* 고정된 높이 */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
-}
-.food_detail {
-    text-decoration: none; /* 밑줄 제거 */
-    display: block; /* 인라인 요소를 블록 요소로 변경 */
-}
-.head{
+  }
+  
+  .food_detail {
+    text-decoration: none;
+    display: block;
+  }
+  
+  .head {
     border: none;
-    background-color:transparent;
-}
-.checkout-button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkout-button {
     background-color: red;
     color: white;
     border: none;
@@ -72,4 +90,40 @@
     justify-self: end;
     align-self: end;
     margin: 10px;
-}
+  }
+  
+  @media (max-width: 1200px) {
+    .food_picture {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .food_picture {
+      width: calc(100% - 20px);
+    }
+  
+    .checkout-button {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    .food_category .category {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .food_picture img {
+      height: 150px;
+    }
+  
+    .checkout-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .food_category .category {
+      font-size: 18px;
+    }
+  }
