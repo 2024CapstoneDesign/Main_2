@@ -80,18 +80,13 @@
                 </div>
             </div>
         </div>
+        <div class="cart">
+            <h2>장바구니</h2>
+            <div id="cart-items"></div>
+            <div id="total-price">0</div>
+            <button class= "checkout-button" onclick="checkout()">결제하기</button>           
+        </div> 
     </main>
-
-
-    <div class="cart">
-        <h2>장바구니</h2>
-        <div id="cart-items"></div>
-        <div id="total-price">0</div>
-        <button class= "checkout-button" onclick="checkout()">결제하기</button>           
-    </div> 
-
-
-    
     <script>
         var target = document.querySelectorAll('.btn_open');
         var btnPopClose = document.querySelectorAll('.btn_close');
