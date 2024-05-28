@@ -60,27 +60,5 @@
         <div id="total-price">0</div>
         <button class= "checkout-button" onclick="checkout()">결제하기</button>           
     </div>      
-
-
-    <script>
-        var target = document.querySelectorAll('.btn_open');
-        var btnPopClose = document.querySelectorAll('.btn_close');
-        var targetID;
-
-        // 팝업 열기
-        for (var i = 0; i < target.length; i++) {
-            target[i].addEventListener('click', function () {
-                targetID = this.getAttribute('href');
-                document.querySelector(targetID).style.display = 'flex';
-            });
-        }
-
-        // 팝업 닫기
-        for (var j = 0; j < btnPopClose.length; j++) {
-            btnPopClose[j].addEventListener('click', function () {
-                this.closest('.pop_wrap').style.display = 'none';
-            });
-        }
-    </script>
 </body>
 </html>
